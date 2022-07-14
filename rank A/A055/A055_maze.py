@@ -16,13 +16,13 @@ def search_goal(start):
         maze[h][w] = 2
 
         # 現在位置の上下左右を探索：〇<2は壁でもなく探索済みでもないものを示す
-        if maze[h-1][w] < 2:  # 左
+        if maze[h-1][w] < 2:  # 下
             pos.insert(0, [h-1, w, depth + 1])
-        if maze[h+1][w] < 2:  # 右
+        if maze[h+1][w] < 2:  # 上
             pos.insert(0, [h+1, w, depth + 1])
-        if maze[h][w-1] < 2:  # 上
+        if maze[h][w-1] < 2:  # 左
             pos.insert(0, [h, w-1, depth + 1])
-        if maze[h][w+1] < 2:  # 下
+        if maze[h][w+1] < 2:  # 右
             pos.insert(0, [h, w+1, depth + 1])
 
     return "NO"
